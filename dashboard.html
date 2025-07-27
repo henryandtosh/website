@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Henry & Tosh Limited</title>
+    <meta name="description" content="Account performance dashboard for Henry & Tosh Limited">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="htlogo.png" alt="Henry & Tosh Limited" class="logo-image">
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#overview" class="nav-link">Overview</a></li>
+                    <li><a href="#performance" class="nav-link">Performance</a></li>
+                    <li><a href="#positions" class="nav-link">Positions</a></li>
+                    <li><a href="#transactions" class="nav-link">Transactions</a></li>
+                    <li><a href="#" class="nav-link" id="logoutBtn">Logout</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Overview Section -->
+        <section id="overview" class="dashboard-section">
+            <div class="container">
+                <h2 class="section-title">Account Overview</h2>
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h3>Total Portfolio Value</h3>
+                        <p class="metric-value" id="totalValue">£1,247,850</p>
+                        <p class="metric-change positive">+£12,400 (+1.0%)</p>
+                        <p class="metric-period">This week</p>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <h3>Available Cash</h3>
+                        <p class="metric-value" id="availableCash">£89,250</p>
+                        <p class="metric-change">7.2% of portfolio</p>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <h3>YTD Performance</h3>
+                        <p class="metric-value" id="ytdPerformance">+18.5%</p>
+                        <p class="metric-change positive">+£194,850</p>
+                        <p class="metric-period">Year to date</p>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <h3>Weekly Income</h3>
+                        <p class="metric-value" id="weeklyIncome">£12,400</p>
+                        <p class="metric-change positive">+£1,200</p>
+                        <p class="metric-period">This week</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Section -->
+        <section id="performance" class="dashboard-section">
+            <div class="container">
+                <h2 class="section-title">Performance Metrics</h2>
+                <div class="performance-grid">
+                    <div class="performance-card">
+                        <h3>Risk Metrics</h3>
+                        <div class="metric-row">
+                            <span>Max Drawdown:</span>
+                            <span class="metric-value">-3.2%</span>
+                        </div>
+                        <div class="metric-row">
+                            <span>Sharpe Ratio:</span>
+                            <span class="metric-value">1.85</span>
+                        </div>
+                        <div class="metric-row">
+                            <span>Volatility:</span>
+                            <span class="metric-value">12.4%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="performance-card">
+                        <h3>Income Generation</h3>
+                        <div class="metric-row">
+                            <span>Monthly Average:</span>
+                            <span class="metric-value">£48,600</span>
+                        </div>
+                        <div class="metric-row">
+                            <span>Weekly Average:</span>
+                            <span class="metric-value">£12,400</span>
+                        </div>
+                        <div class="metric-row">
+                            <span>Success Rate:</span>
+                            <span class="metric-value">94.2%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="performance-card">
+                        <h3>Position Management</h3>
+                        <div class="metric-row">
+                            <span>Active Positions:</span>
+                            <span class="metric-value">8</span>
+                        </div>
+                        <div class="metric-row">
+                            <span>Avg Hold Time:</span>
+                            <span class="metric-value">3.2 days</span>
+                        </div>
+                        <div class="metric-row">
+                            <span>Rollover Rate:</span>
+                            <span class="metric-value">67%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Positions Section -->
+        <section id="positions" class="dashboard-section">
+            <div class="container">
+                <h2 class="section-title">Current Positions</h2>
+                <div class="positions-table-container">
+                    <table class="positions-table">
+                        <thead>
+                            <tr>
+                                <th>Symbol</th>
+                                <th>Type</th>
+                                <th>Quantity</th>
+                                <th>Entry Price</th>
+                                <th>Current Price</th>
+                                <th>P&L</th>
+                                <th>P&L %</th>
+                            </tr>
+                        </thead>
+                        <tbody id="positionsTableBody">
+                            <tr>
+                                <td>MSTR</td>
+                                <td>Synthetic Long</td>
+                                <td>1,000</td>
+                                <td>£1,245</td>
+                                <td>£1,268</td>
+                                <td class="positive">+£23,000</td>
+                                <td class="positive">+1.8%</td>
+                            </tr>
+                            <tr>
+                                <td>MSTR 240C</td>
+                                <td>Covered Call</td>
+                                <td>10 contracts</td>
+                                <td>£12.40</td>
+                                <td>£8.20</td>
+                                <td class="positive">+£4,200</td>
+                                <td class="positive">+33.9%</td>
+                            </tr>
+                            <tr>
+                                <td>MSTR 245C</td>
+                                <td>Covered Call</td>
+                                <td>10 contracts</td>
+                                <td>£8.80</td>
+                                <td>£5.40</td>
+                                <td class="positive">+£3,400</td>
+                                <td class="positive">+38.6%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Transactions -->
+        <section id="transactions" class="dashboard-section">
+            <div class="container">
+                <h2 class="section-title">Recent Transactions</h2>
+                <div class="transactions-container">
+                    <div class="transaction-item">
+                        <div class="transaction-date">Today 14:30</div>
+                        <div class="transaction-details">
+                            <span class="transaction-type buy">BUY</span>
+                            <span class="transaction-symbol">MSTR 250C</span>
+                            <span class="transaction-quantity">5 contracts</span>
+                            <span class="transaction-price">£6.20</span>
+                        </div>
+                    </div>
+                    
+                    <div class="transaction-item">
+                        <div class="transaction-date">Today 11:15</div>
+                        <div class="transaction-details">
+                            <span class="transaction-type sell">SELL</span>
+                            <span class="transaction-symbol">MSTR 240C</span>
+                            <span class="transaction-quantity">10 contracts</span>
+                            <span class="transaction-price">£8.20</span>
+                        </div>
+                    </div>
+                    
+                    <div class="transaction-item">
+                        <div class="transaction-date">Yesterday 16:45</div>
+                        <div class="transaction-details">
+                            <span class="transaction-type buy">BUY</span>
+                            <span class="transaction-symbol">MSTR</span>
+                            <span class="transaction-quantity">500 shares</span>
+                            <span class="transaction-price">£1,245</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Henry & Tosh Limited</h3>
+                    <p>Private limited company under Companies Act 2006</p>
+                    <p>Registered in England & Wales | Company No: 11919030</p>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2024 Henry & Tosh Limited. All rights reserved.</p>
+                    <p>Account information is confidential and for authorized users only.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html> 

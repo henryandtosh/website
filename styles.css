@@ -104,7 +104,7 @@ p {
 }
 
 .nav-link:hover {
-    color: #1e3a8a;
+    color: #fff;
 }
 
 .nav-link::after {
