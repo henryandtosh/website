@@ -3,122 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Henry & Tosh Limited - Private Investment Company</title>
-    <meta name="description" content="Henry & Tosh Limited is a UK-based private investment company focused on trading synthetic options to generate weekly income via covered call strategies.">
-    <meta name="keywords" content="Henry & Tosh Limited, private investment, options trading, synthetic strategies, UK investment company">
+    <title>Henry &amp; Tosh Limited | Private Investment Company</title>
+    <meta name="description" content="Henry &amp; Tosh Limited is a privately held UK investment company applying disciplined options-led strategies to its own capital.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://henryandtosh.com/">
+    <meta property="og:title" content="Henry &amp; Tosh Limited">
+    <meta property="og:description" content="A privately held UK investment company applying disciplined options-led strategies to its own capital.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://henryandtosh.com/">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Slab:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="logo">
-                    <img src="htlogo.png" alt="Henry & Tosh Limited" class="logo-image">
-                </div>
-                <ul class="nav-menu">
+        <nav class="nav" aria-label="Primary navigation">
+            <div class="nav-container container">
+                <a class="logo" href="#home" aria-label="Henry &amp; Tosh Limited home">
+                    <img src="htlogo.webp" alt="Henry &amp; Tosh Limited" class="logo-image" width="240" height="160">
+                </a>
+                <ul class="nav-menu" id="primary-navigation">
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#strategy" class="nav-link">Strategy</a></li>
-                    <li><a href="login.html" class="nav-link">Account Access</a></li>
+                    <li><a href="#governance" class="nav-link">Governance</a></li>
+                    <li><a href="#contact" class="nav-link nav-link-cta">Contact</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <button class="hamburger" type="button" aria-label="Open navigation" aria-controls="primary-navigation" aria-expanded="false">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
             </div>
         </nav>
     </header>
 
-    <main>
-        <!-- Home Section -->
+    <main id="main-content">
         <section id="home" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <h2 class="hero-title">Strategic Alpha Through Disciplined Options Trading</h2>
-                    <p class="hero-subtitle">A private investment company generating strategic alpha through disciplined options trading on US tech.</p>
-                    <div class="hero-features">
-                        <div class="feature">
-                            <h3>Options-led Investment Strategies</h3>
-                            <p>Focused on synthetic long + covered call income models</p>
-                        </div>
-                        <div class="feature">
-                            <h3>Risk Management</h3>
-                            <p>Defined-risk positions with comprehensive liquidity buffers</p>
-                        </div>
-                        <div class="feature">
-                            <h3>Weekly Execution</h3>
-                            <p>Active position management with Monday morning recalibration</p>
-                        </div>
-                    </div>
-                    <div class="hero-disclaimer">
-                        <p><strong>Privately held. No client assets managed.</strong></p>
-                    </div>
+            <div class="container hero-content">
+                <p class="eyebrow">Privately held · England &amp; Wales</p>
+                <h1 class="hero-title">Strategic alpha through disciplined options trading</h1>
+                <p class="hero-subtitle">A private investment company applying systematic, options-led strategies to its own capital across US technology equities.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#contact">Contact the directors</a>
+                    <a class="button button-secondary" href="#strategy">Our approach</a>
                 </div>
+                <p class="hero-disclaimer"><strong>Privately held. No client assets managed.</strong></p>
+                <ul class="hero-features">
+                    <li class="feature">
+                        <span class="feature-number" aria-hidden="true">01</span>
+                        <h2>Options-led strategies</h2>
+                        <p>Synthetic long positions combined with covered calls to pursue directional alpha and income.</p>
+                    </li>
+                    <li class="feature">
+                        <span class="feature-number" aria-hidden="true">02</span>
+                        <h2>Defined risk controls</h2>
+                        <p>Position limits, liquidity buffers and active monitoring govern every deployment of capital.</p>
+                    </li>
+                    <li class="feature">
+                        <span class="feature-number" aria-hidden="true">03</span>
+                        <h2>Weekly discipline</h2>
+                        <p>Positions are reviewed each Monday and managed throughout the week as conditions change.</p>
+                    </li>
+                </ul>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="section-title">About Us</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>Company Background</h3>
-                        <p>Founded in 2019, Henry & Tosh Limited is a private investment company registered in England & Wales (Company No. 11919030). We focus on disciplined execution of synthetic strategies to extract income and directional alpha from high-beta equities.</p>
-                        
-                        <h3>Investment Ethos</h3>
-                        <p>Our approach centers on systematic options trading, utilizing synthetic long positions combined with covered call strategies to generate consistent weekly income while maintaining defined risk parameters.</p>
-                    </div>
-
+        <section id="about" class="section about">
+            <div class="container split-layout">
+                <div>
+                    <p class="eyebrow">About the company</p>
+                    <h2 class="section-title section-title-left">Independent by design</h2>
                 </div>
+                <div class="prose">
+                    <p class="lead">Founded in 2019, Henry &amp; Tosh Limited is a private investment company registered in England &amp; Wales under Company No. 11919030.</p>
+                    <p>We focus on disciplined execution of synthetic strategies designed to extract income and directional alpha from high-beta equities. The company operates exclusively with its own capital and does not accept or manage client funds.</p>
+                </div>
+            </div>
+            <div class="container directors">
+                <article class="director-card">
+                    <p class="card-label">Director</p>
+                    <h3>Kenneth George Muir</h3>
+                    <p>Director of Henry &amp; Tosh Limited.</p>
+                </article>
+                <article class="director-card">
+                    <p class="card-label">Director</p>
+                    <h3>Sandra Lee Ann Muir</h3>
+                    <p>Director of Henry &amp; Tosh Limited.</p>
+                </article>
             </div>
         </section>
 
-        <!-- Strategy Section -->
-        <section id="strategy" class="strategy">
+        <section id="strategy" class="section strategy">
             <div class="container">
-                <h2 class="section-title">Investment Strategy</h2>
+                <p class="eyebrow">Investment strategy</p>
+                <h2 class="section-title">A repeatable operating rhythm</h2>
                 <div class="strategy-content">
-                    <div class="strategy-card">
-                        <h3>Synthetic Long + Covered Call Model</h3>
-                        <p>Our core strategy involves establishing synthetic long positions through options combinations, then selling covered calls against these positions to generate weekly income. This approach allows us to capture both directional movement and time decay.</p>
-                    </div>
-                    <div class="strategy-card">
-                        <h3>Risk Management Framework</h3>
-                        <p>We maintain strict risk controls including defined-risk positions, comprehensive liquidity buffers, and maximum weekly drawdown limits. All positions are actively monitored and adjusted based on market conditions and volatility metrics.</p>
-                    </div>
-                    <div class="strategy-card">
-                        <h3>Weekly Execution Cycle</h3>
-                        <p>Our strategy is reviewed and recalibrated every Monday morning, with positions actively managed throughout the week to optimise risk-reward. This systematic approach ensures consistent execution and performance tracking.</p>
-                    </div>
+                    <article class="strategy-card">
+                        <h3>Synthetic long + covered call</h3>
+                        <p>Our core model establishes synthetic long exposure through options combinations, then writes calls against that exposure to pursue both directional participation and option premium income.</p>
+                    </article>
+                    <article class="strategy-card">
+                        <h3>Risk management framework</h3>
+                        <p>Defined position parameters, liquidity reserves and drawdown limits are applied before entry. Exposure is actively monitored against market conditions and volatility.</p>
+                    </article>
+                    <article class="strategy-card">
+                        <h3>Weekly execution cycle</h3>
+                        <p>The portfolio is reviewed and recalibrated every Monday morning, with positions actively managed throughout the week to optimise risk and reward.</p>
+                    </article>
                 </div>
+                <aside class="legal-note">
+                    <strong>Important information</strong>
+                    <p>Descriptions of strategy are provided for general corporate information only. They are not investment advice, a recommendation, or an invitation to invest.</p>
+                </aside>
             </div>
         </section>
 
+        <section id="governance" class="section governance">
+            <div class="container split-layout">
+                <div>
+                    <p class="eyebrow">Governance &amp; legal</p>
+                    <h2 class="section-title section-title-left">Clear corporate standing</h2>
+                </div>
+                <dl class="company-details">
+                    <div>
+                        <dt>Legal name</dt>
+                        <dd>Henry &amp; Tosh Limited</dd>
+                    </div>
+                    <div>
+                        <dt>Company number</dt>
+                        <dd>11919030</dd>
+                    </div>
+                    <div>
+                        <dt>Legal status</dt>
+                        <dd>Private limited company under the Companies Act 2006</dd>
+                    </div>
+                    <div>
+                        <dt>Registered office</dt>
+                        <dd>Sherwood, Lower Seagry, Chippenham, SN15 5EP</dd>
+                    </div>
+                    <div>
+                        <dt>Audit exemption</dt>
+                        <dd>Statutory accounts are filed under the applicable small-company reporting and audit-exemption provisions where eligibility criteria are met.</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
 
-
-
+        <section id="contact" class="section contact">
+            <div class="container contact-layout">
+                <div class="contact-copy">
+                    <p class="eyebrow">Contact</p>
+                    <h2 class="section-title section-title-left">Contact the directors</h2>
+                    <p>For corporate, banking or counterparty enquiries, send a confidential message using this form.</p>
+                    <p class="contact-email">Alternatively email <a href="mailto:admin@henryandtosh.com">admin@henryandtosh.com</a>.</p>
+                </div>
+                <form class="contact-form" name="director-contact" method="post" action="/thanks.html" data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="director-contact">
+                    <p class="honeypot" aria-hidden="true">
+                        <label>Do not fill this out if you are human: <input name="bot-field" type="text" tabindex="-1" autocomplete="off"></label>
+                    </p>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" autocomplete="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="organisation">Organisation <span>(optional)</span></label>
+                        <input id="organisation" name="organisation" type="text" autocomplete="organization">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    <button class="button button-primary submit-button" type="submit">Send confidential enquiry</button>
+                    <p class="form-note">Submitted information is used only to respond to your enquiry.</p>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <h3>Henry & Tosh Limited</h3>
-                    <p>Private limited company under Companies Act 2006</p>
-                    <p>Registered in England & Wales | Company No: 11919030</p>
-                </div>
-                <div class="footer-legal">
-                    <p>&copy; 2024 Henry & Tosh Limited. All rights reserved.</p>
-                    <p>This website is for informational purposes only and does not constitute an offer to invest.</p>
-                </div>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h2>Henry &amp; Tosh Limited</h2>
+                <p>Registered in England &amp; Wales · Company No. 11919030</p>
+            </div>
+            <div class="footer-legal">
+                <p>&copy; <span id="copyright-year">2026</span> Henry &amp; Tosh Limited. All rights reserved.</p>
+                <p>This website is for informational purposes only and does not constitute an offer to invest.</p>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
-</html> 
+</html>
