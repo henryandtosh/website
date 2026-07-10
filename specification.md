@@ -31,7 +31,6 @@ Here's a **website specification** for **Henry & Tosh Limited** to guide the dev
 #### **About Us**
 
 * Company background (founded 2019, registered in England & Wales, Company No. 11919030)
-* Director bios (e.g. Kenneth George Muir, Sandra Lee Ann Muir)
 * Statement on investment ethos: *“We focus on disciplined execution of synthetic strategies to extract income and directional alpha from high-beta equities.”*
 
 #### **Strategy**
@@ -77,7 +76,7 @@ Here's a **website specification** for **Henry & Tosh Limited** to guide the dev
 * Hosting: UK-based secure host with SSL certificate
 * Mobile-first responsive design
 * No third-party trackers or analytics unless anonymised
-* SEO metadata (just company name, registration details, and director names)
+* SEO metadata (company name and registration details only)
 
 ---
 

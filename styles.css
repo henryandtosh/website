@@ -311,8 +311,7 @@ section[id] {
     border-left: 1px solid var(--line);
 }
 
-.feature-number,
-.card-label {
+.feature-number {
     display: block;
     margin-bottom: 1.8rem;
     color: var(--accent);
@@ -367,14 +366,6 @@ section[id] {
     font-size: clamp(1.2rem, 2.2vw, 1.55rem);
 }
 
-.directors {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-top: 5rem;
-}
-
-.director-card,
 .strategy-card {
     border: 1px solid var(--line);
     border-radius: var(--radius);
@@ -382,7 +373,6 @@ section[id] {
     padding: clamp(1.7rem, 4vw, 2.7rem);
 }
 
-.director-card h3,
 .strategy-card h3 {
     margin-bottom: 0.8rem;
     font-size: 1.4rem;
@@ -545,7 +535,6 @@ section[id] {
         width: 100%;
     }
 
-    .directors,
     .footer-content {
         grid-template-columns: 1fr;
     }
