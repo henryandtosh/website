@@ -4,7 +4,7 @@ A static institutional brochure site for Henry & Tosh Limited, deployed on Netli
 
 ## Page
 
-- `index.html` — company overview, strategy, governance and direct email contact
+- `index.html` — company overview, strategy and governance
 
 The previous static login and dashboard were deliberately retired because static HTML cannot provide secure authentication or protect confidential data. Their old URLs redirect to the homepage through `netlify.toml`.
 
@@ -23,10 +23,6 @@ python3 -m unittest discover -s tests -v
 npx --yes html-validate@10.4.0 '*.html'
 node --check script.js
 ```
-
-## Contact
-
-The public site provides a direct email link for corporate, banking and counterparty enquiries. It contains no web form, authentication system or private account data.
 
 ## Deployment and security
 

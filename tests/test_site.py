@@ -43,19 +43,21 @@ class SiteContractTests(unittest.TestCase):
         self.assertEqual(toggles[0].get("aria-expanded"), "false")
         self.assertTrue(toggles[0].get("aria-label"))
 
-    def test_contact_is_email_only_and_no_form_is_shipped(self):
+    def test_no_client_contact_channel_is_shipped(self):
         forms = [attrs for tag, attrs in self.parser.start_tags if tag == "form"]
         self.assertEqual(forms, [])
         self.assertFalse((ROOT / "thanks.html").exists())
         self.assertNotIn("thanks.html", self.index)
-        self.assertIn('href="mailto:admin@henryandtosh.com"', self.index)
+        self.assertNotIn("mailto:", self.index)
+        self.assertNotIn("Contact the directors", self.index)
+        self.assertNotIn('href="#contact"', self.index)
+        self.assertNotIn('id="contact"', self.index)
 
     def test_required_trust_content_is_present(self):
         for text in (
             "Kenneth George Muir",
             "Sandra Lee Ann Muir",
             "Sherwood, Lower Seagry, Chippenham, SN15 5EP",
-            "admin@henryandtosh.com",
             "Audit exemption",
             "No client assets managed",
         ):

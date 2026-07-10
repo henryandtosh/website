@@ -13,9 +13,9 @@ Here's a **website specification** for **Henry & Tosh Limited** to guide the dev
 ### 2. **Core Goals**
 
 * Communicate who we are and what we do.
-* Present a professional front for counterparties, banks, and collaborators.
+* Present a professional corporate record.
 * Establish credibility with minimal compliance flags (no mention of crypto).
-* Offer contact and verification details for financial institutions.
+* Offer verification details for financial institutions.
 
 ---
 
@@ -26,7 +26,7 @@ Here's a **website specification** for **Henry & Tosh Limited** to guide the dev
 * Brief summary of Henry & Tosh’s mission: *“A private investment company generating strategic alpha through disciplined options trading on US tech.”*
 * High-level focus on “Options-led Investment Strategies”
 * Discrete statement: *“Privately held. No client assets managed.”*
-* CTA button: **“Contact the Directors”**
+* CTA button: **“Our approach”**
 
 #### **About Us**
 
@@ -58,12 +58,6 @@ Here's a **website specification** for **Henry & Tosh Limited** to guide the dev
 * Legal status: *“Private limited company under Companies Act 2006”*
 * Audit exemption note
 * Corporation tax compliance (loss carryforward noted if necessary)
-
-#### **Contact**
-
-* Secure form to reach directors (Name, Email, Message)
-* Verified email address: `admin@henryandtosh.com`
-* No phone number listed to maintain privacy
 
 ---
 
