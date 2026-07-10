@@ -2,10 +2,9 @@
 
 A static institutional brochure site for Henry & Tosh Limited, deployed on Netlify.
 
-## Pages
+## Page
 
-- `index.html` — company overview, strategy, governance and director contact form
-- `thanks.html` — Netlify form confirmation page
+- `index.html` — company overview, strategy, governance and direct email contact
 
 The previous static login and dashboard were deliberately retired because static HTML cannot provide secure authentication or protect confidential data. Their old URLs redirect to the homepage through `netlify.toml`.
 
@@ -25,16 +24,9 @@ npx --yes html-validate@10.4.0 '*.html'
 node --check script.js
 ```
 
-## Contact form
+## Contact
 
-The contact form uses Netlify Forms with:
-
-- `POST` submission
-- Netlify bot-field honeypot protection
-- a local success page
-- no client-side handling of submitted data
-
-After deployment, configure form notification recipients in the Netlify dashboard. The site contains no authentication system and does not publish private account data.
+The public site provides a direct email link for corporate, banking and counterparty enquiries. It contains no web form, authentication system or private account data.
 
 ## Deployment and security
 
