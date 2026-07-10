@@ -43,15 +43,12 @@ class SiteContractTests(unittest.TestCase):
         self.assertEqual(toggles[0].get("aria-expanded"), "false")
         self.assertTrue(toggles[0].get("aria-label"))
 
-    def test_contact_form_uses_netlify_post_and_spam_protection(self):
-        forms = [attrs for tag, attrs in self.parser.start_tags if tag == "form" and attrs.get("name") == "director-contact"]
-        self.assertEqual(len(forms), 1)
-        self.assertEqual(forms[0].get("method", "").lower(), "post")
-        self.assertIn("data-netlify", forms[0])
-        self.assertIn("data-netlify-honeypot", forms[0])
-        self.assertEqual(forms[0].get("action"), "/thanks.html")
-        self.assertIn('class="honeypot" aria-hidden="true"', self.index)
-        self.assertIn('name="bot-field" type="text" tabindex="-1"', self.index)
+    def test_contact_is_email_only_and_no_form_is_shipped(self):
+        forms = [attrs for tag, attrs in self.parser.start_tags if tag == "form"]
+        self.assertEqual(forms, [])
+        self.assertFalse((ROOT / "thanks.html").exists())
+        self.assertNotIn("thanks.html", self.index)
+        self.assertIn('href="mailto:admin@henryandtosh.com"', self.index)
 
     def test_required_trust_content_is_present(self):
         for text in (
