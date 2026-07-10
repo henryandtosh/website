@@ -53,10 +53,12 @@ class SiteContractTests(unittest.TestCase):
         self.assertNotIn('href="#contact"', self.index)
         self.assertNotIn('id="contact"', self.index)
 
+    def test_director_names_are_not_shipped(self):
+        self.assertNotIn("Kenneth George Muir", self.index)
+        self.assertNotIn("Sandra Lee Ann Muir", self.index)
+
     def test_required_trust_content_is_present(self):
         for text in (
-            "Kenneth George Muir",
-            "Sandra Lee Ann Muir",
             "Sherwood, Lower Seagry, Chippenham, SN15 5EP",
             "Audit exemption",
             "No client assets managed",
